@@ -1,3 +1,6 @@
+//$ FIZZBUZZ
+//# PRACTICE ROUND 1
+
 // function checkNum (num) {
 //     if (num % 3 === 0 && num % 5 === 0)
 //     {

@@ -1,5 +1,7 @@
-// // ### Challenge: Even or Odd
-// // Write a function that takes a number as a parameter and returns whether it's even or odd.
+//$ EVEN OR ODD
+//# PRACTICE ROUND 1
+// Write a function that takes a number as a parameter and returns whether it's even or odd.
+
 // function thisOrThat(num) {
 //   if (num % 1 === 0) {
 //     return "Odd";
