@@ -15,7 +15,6 @@
 
 // // console.log(factorial(10));
 
-
 // //ChatGPT helped me refactor my above attempt. But this is what ChatGPT had for its version first:
 // function factorial(n) { // use "n" as a parameter
 //     if (n === 0 || n === 1) { // if the given number equals 0 OR 1 ....
@@ -38,11 +37,6 @@
 // //? So why does the loop above start at 2? Because we already know that factorials of 0 and 1 are going to be 0 and 1. So the next number to try would be 2. So, if a user enters 0 or 1, we have that handled with our first statement where we return 1. SO the next  number in line is 2, so we start iterating from 2 and go up until we hit "n", which is the user's input number.
 // // What confused me this morning is, i = 2...isn't the user giving us input for the value of i? We are hijacking the value of "i" arent we? NO. The user gave us the value of "n", not "i". The value of i is just a starting point for a loop. Since we already dealt with 0 and 1, the i should be initialized at 2 so our loop will start at the least possible number the user could give us...which is 2.
 
-
-
-
-
-
 //$ ADDITION
 //# PRACTICE ROUND 2 on 3/21/2024 for about an hour
 // // Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
@@ -51,7 +45,7 @@
 // function factorial2(num2) {
 //     if(num2 === 0 || num2 === 1) {
 //         return 1;
-//     } 
+//     }
 //     else {
 //         let result = 1;
 //         for (let i = 2; i <= num2; i++) //for as long as the user-provided num2 is less than 10, keep on looping through and increment by one on the next round
@@ -67,60 +61,62 @@
 
 //Spelling it out here below with num2 equaling 10 from the user...
 // first time the loop runs, "result" value is the number 1 and the value of "i" is the number 1
-    //for (let i = 2; 2 <= num2 (which is true if num2 is 10); i++ (go to 3 on the next loop)){
-        // result gets assigned the value of "i" times the value of result
-        //for the first loop, as we said above, the value of "i" is 2 and result is 1
-        //so 2 times 1 equals 2
-        //the variable "result" now equals 2
+//for (let i = 2; 2 <= num2 (which is true if num2 is 10); i++ (go to 3 on the next loop)){
+// result gets assigned the value of "i" times the value of result
+//for the first loop, as we said above, the value of "i" is 2 and result is 1
+//so 2 times 1 equals 2
+//the variable "result" now equals 2
 // second time the loop runs, "result" value is the number 2 and the value of "i" is the number 3 (because the i++ incremented up once from 2)
 // remember the loop skips the initializing of i to the value of 2....it remembers the new value of i is 3 now bc it's been incremented. So...
-    // for (3 <= 10) {
-        // result (which was 2 last time it was updated) *= 3 (which means 2 times 3 will be stored as the new value of "result" variable)
-        // so at this point, the value of "result" is 6
-    // }
+// for (3 <= 10) {
+// result (which was 2 last time it was updated) *= 3 (which means 2 times 3 will be stored as the new value of "result" variable)
+// so at this point, the value of "result" is 6
+// }
 // third time the loop runs, "result" value is the number 6 and the value of "i" is the number 4 (because the i++ incremented up once from 3)
-    // so the for loop runs again with checking if "i" (which is now 4) is less than 10 (which it is) and then executing the curly braces
-    // {result *= i} (these curly braces are executed again where result gets another new value by multiplying itself (6) by the newest value of "i" (which is 4))
-    // }
+// so the for loop runs again with checking if "i" (which is now 4) is less than 10 (which it is) and then executing the curly braces
+// {result *= i} (these curly braces are executed again where result gets another new value by multiplying itself (6) by the newest value of "i" (which is 4))
+// }
 // this goes on until the final loop where it checks if 11 is less than or equal to num2(which is 10)...and returns false...then it goes to return whatever the most current value of "return" is at that point.
-
-
-
 
 //$ ADDITION
 //# PRACTICE ROUND 3 on 3/23/2024
-// Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
-function factorial3(num3) {
-  if (num3 === 0 || num3 === 1) {
-    return 1;
-  } else {
-    let result = 1;
-    for (let i = 2; i <= num3; i++) {
-      result *= i;
-    }
-    return result;
-  }
-}
+// // Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+// function factorial3(num3) {
+//   if (num3 === 0 || num3 === 1) {
+//     return 1;
+//   } else {
+//     let result = 1;
+//     for (let i = 2; i <= num3; i++) {
+//       result *= i;
+//     }
+//     return result;
+//   }
+// }
 
-
-console.log(factorial3(11))
-console.log(factorial3(10))
-console.log(factorial3(4))
-console.log(factorial3(0))
-console.log(factorial3(1))
-
-
-
-
+// console.log(factorial3(11))
+// console.log(factorial3(10))
+// console.log(factorial3(4))
+// console.log(factorial3(0))
+// console.log(factorial3(1))
 
 //$ ADDITION
 //# PRACTICE ROUND 4 on 3/23/2024
 // Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+function factorial4(num4) {
+  if (num4 === 0 || num4 === 1) {
+    return 1;
+  } else {
+    // otherwise, if the user gives us anything above 1...loop through and repeatedly do this other thing with a for loop...
+    let result = 1; //initialize a result that we can tally as we go from one number to the next
+    for (let i = 2; i <= num4; i++) {
+      result *= i; //do this
+    } // based on this condition, as long as
+    return result;
+  }
+}
 
-
-
-
-
-
-
-
+console.log(factorial4(0));
+console.log(factorial4(1));
+console.log(factorial4(2));
+console.log(factorial4(3));
+console.log(factorial4(4));
