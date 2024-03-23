@@ -45,25 +45,25 @@
 
 //$ ADDITION
 //# PRACTICE ROUND 2 on 3/21/2024 for about an hour
-// Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+// // Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
 
-//I will pretend num2 is 10
-function factorial2(num2) {
-    if(num2 === 0 || num2 === 1) {
-        return 1;
-    } 
-    else {
-        let result = 1;
-        for (let i = 2; i <= num2; i++) //for as long as the user-provided num2 is less than 10, keep on looping through and increment up by one on the next round
-        {
-            result *= i;
-        }        
-        return result;
-}
-}
+// //I will pretend num2 is 10
+// function factorial2(num2) {
+//     if(num2 === 0 || num2 === 1) {
+//         return 1;
+//     } 
+//     else {
+//         let result = 1;
+//         for (let i = 2; i <= num2; i++) //for as long as the user-provided num2 is less than 10, keep on looping through and increment by one on the next round
+//         {
+//             result *= i; //first loop this would be 1 x 2 with 1 being "result" initialized and 2 being "i" initialized...then second loop would be 2 ("result" newest value from previous loop) x 3 (which is "i" newest value bc it incremented up)....then third loop would be 6 as the newest value of "result" times 4 as newest value of "i"... and now we are at 6 x 4 = 24 for the newest value of "result" ....and then fourth loop would be 24 (result) x 5 (i) = 120 (result)......120 x 6 = 720 (result)...etc
+//         }
+//         return result;
+// }
+// }
 
-console.log(factorial2(10))
-console.log(factorial2(4))
+// console.log(factorial2(10))
+// console.log(factorial2(4))
 
 //Spelling it out here below with num2 equaling 10 from the user...
 // first time the loop runs, "result" value is the number 1 and the value of "i" is the number 1
@@ -87,20 +87,34 @@ console.log(factorial2(4))
 
 
 
-
 //$ ADDITION
-//# PRACTICE ROUND 3
+//# PRACTICE ROUND 3 on 3/23/2024
 // Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+function factorial3(num3) {
+  if (num3 === 0 || num3 === 1) {
+    return 1;
+  } else {
+    let result = 1;
+    for (let i = 2; i <= num3; i++) {
+      result *= i;
+    }
+    return result;
+  }
+}
 
 
-
+console.log(factorial3(11))
+console.log(factorial3(10))
+console.log(factorial3(4))
+console.log(factorial3(0))
+console.log(factorial3(1))
 
 
 
 
 
 //$ ADDITION
-//# PRACTICE ROUND 4
+//# PRACTICE ROUND 4 on 3/23/2024
 // Write a function that calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
 
 
